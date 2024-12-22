@@ -1,0 +1,20 @@
+name: Deploy
+# Allows manually running a workflow
+# Normally would use different triggers depending on context
+# Here we just want a manual trigger
+on: [workflow_dispatch]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+      - name: Build
+        run: npm ci \
+             npm run build
+      - name: Test
+        run: npm test
