@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22.12.0
+          node-version: 22.12.0 # There's probably a better way to do this using a specific version in the app code directory
       - name: Build
         run: npm ci \
              npm run build
