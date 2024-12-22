@@ -13,8 +13,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       # Run the "semgrep ci" command on the command line of the docker image.
-      - name: Configure semgrep
-        run: semgrep --config=auto
       - name: Run Static Application Analysis
         run: semgrep ci --subdir=gh-node/
         env:
