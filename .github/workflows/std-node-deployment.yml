@@ -48,6 +48,7 @@ jobs:
         working-directory: ./gh-node 
     steps:
       # https://github.com/jeremylong/DependencyCheck
+      # https://github.com/marketplace/actions/dependency-check
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Java
