@@ -1,4 +1,4 @@
-name: Deploy
+name: Standard Node Deployment
 # Allows manually running a workflow
 # Normally would use different triggers depending on context
 # Here we just want a manual trigger
