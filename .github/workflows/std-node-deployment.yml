@@ -6,6 +6,11 @@ on: [workflow_dispatch]
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        # We can set the directory this pipeline is working with via this
+        # Otherwise we'd have to specify in every step
+        working-directory: ./gh-node 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
